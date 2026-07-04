@@ -10,8 +10,8 @@ html{
 
 body{
     font-family:'Montserrat',sans-serif;
+    background:#111;
     color:#fff;
-    background:#0f0f0f;
     overflow-x:hidden;
 }
 
@@ -28,14 +28,14 @@ header{
     align-items:center;
     z-index:1000;
     background:rgba(0,0,0,.25);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 }
 
 .logo{
+    color:white;
     font-size:30px;
     font-weight:700;
     letter-spacing:4px;
-    color:white;
 }
 
 nav{
@@ -61,7 +61,10 @@ nav a:hover{
     width:100%;
     height:100vh;
 
-    background:url("../images/hero.jpg") center center/cover no-repeat;
+    background-image:url("../images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
@@ -78,21 +81,22 @@ nav a:hover{
 .hero-content{
     position:relative;
     z-index:2;
-    text-align:center;
     max-width:900px;
+    text-align:center;
     padding:20px;
 }
 
 .hero h1{
     font-size:72px;
     line-height:1.1;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .hero p{
     font-size:22px;
     line-height:1.8;
     margin-bottom:45px;
+    opacity:.95;
 }
 
 .btn{
@@ -102,7 +106,7 @@ nav a:hover{
     color:white;
     text-decoration:none;
     font-weight:600;
-    transition:.3s;
+    transition:.35s;
 }
 
 .btn:hover{
@@ -113,9 +117,9 @@ nav a:hover{
 /* SOBRE NOSOTROS */
 
 .about{
-    padding:120px 10%;
-    color:#111;
     background:white;
+    color:#111;
+    padding:120px 10%;
 }
 
 .container{
@@ -130,7 +134,7 @@ nav a:hover{
 
 .about p{
     font-size:20px;
-    line-height:1.8;
+    line-height:1.9;
     color:#666;
 }
 
@@ -144,7 +148,7 @@ nav a:hover{
 .portfolio h2{
     text-align:center;
     font-size:42px;
-    margin-bottom:60px;
+    margin-bottom:70px;
 }
 
 .grid{
@@ -155,7 +159,8 @@ nav a:hover{
 
 .item{
     overflow:hidden;
-    border-radius:18px;
+    border-radius:20px;
+    cursor:pointer;
 }
 
 .item img{
@@ -163,11 +168,11 @@ nav a:hover{
     height:420px;
     object-fit:cover;
     display:block;
-    transition:.5s;
+    transition:.6s;
 }
 
 .item:hover img{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 /* CONTACTO */
@@ -196,26 +201,36 @@ nav a:hover{
     color:black;
     text-decoration:none;
     font-weight:700;
+    transition:.3s;
+}
+
+.contact a:hover{
+    transform:translateY(-3px);
 }
 
 /* FOOTER */
 
 footer{
-    background:#000;
+    background:black;
     padding:30px;
     text-align:center;
+    color:white;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
 
+    header{
+        padding:20px 6%;
+    }
+
     nav{
         display:none;
     }
 
     .hero h1{
-        font-size:46px;
+        font-size:48px;
     }
 
     .hero p{
