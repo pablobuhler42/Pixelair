@@ -188,9 +188,19 @@ nav a:hover{
     margin-bottom:25px;
 }
 
-.contact p{
+.contact>p{
     font-size:20px;
-    margin-bottom:40px;
+    margin-bottom:35px;
+}
+
+.contact-info{
+    margin:40px 0;
+}
+
+.contact-info p{
+    font-size:20px;
+    margin:15px 0;
+    color:#ddd;
 }
 
 .contact a{
@@ -206,15 +216,22 @@ nav a:hover{
 
 .contact a:hover{
     transform:translateY(-3px);
+    background:#f1f1f1;
 }
 
 /* FOOTER */
 
 footer{
-    background:black;
-    padding:30px;
+    background:#000;
+    padding:40px 20px;
     text-align:center;
     color:white;
+    line-height:1.8;
+}
+
+footer p{
+    margin:8px 0;
+    color:#bbb;
 }
 
 /* RESPONSIVE */
@@ -239,6 +256,10 @@ footer{
 
     .grid{
         grid-template-columns:1fr;
+    }
+
+    .contact-info p{
+        font-size:18px;
     }
 
 }
