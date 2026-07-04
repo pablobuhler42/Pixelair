@@ -3,17 +3,17 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pixelair | Fotografía y Vídeo Aéreo</title>
+<title>Pixelair | Fotografía y Vídeo Aéreo</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -21,114 +21,104 @@
 
 <header>
 
-    <div class="logo">
-        PIXELAIR
-    </div>
+<div class="logo">
+PIXELAIR
+</div>
 
-    <nav>
+<div class="languages">
 
-        <a href="#" id="nav-home">Inicio</a>
-        <a href="#about" id="nav-about">Sobre nosotros</a>
-        <a href="#portfolio" id="nav-portfolio">Portfolio</a>
-        <a href="#contacto" id="nav-contact">Contacto</a>
+<span onclick="cambiarIdioma('es')">🇪🇸</span>
 
-    </nav>
+<span onclick="cambiarIdioma('en')">🇬🇧</span>
 
-    <div class="languages">
+<span onclick="cambiarIdioma('de')">🇩🇪</span>
 
-        <button onclick="changeLanguage('es')" title="Español">🇪🇸</button>
-        <button onclick="changeLanguage('en')" title="English">🇬🇧</button>
-        <button onclick="changeLanguage('de')" title="Deutsch">🇩🇪</button>
+</div>
 
-    </div>
+<nav>
+
+<a id="navInicio" href="#">Inicio</a>
+
+<a id="navSobre" href="#about">Sobre nosotros</a>
+
+<a id="navPortfolio" href="#portfolio">Portfolio</a>
+
+<a id="navContacto" href="#contacto">Contacto</a>
+
+</nav>
 
 </header>
 
-
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1 id="hero-title">
+<h1 id="heroTitulo">
+Capturamos lugares desde otra perspectiva.
+</h1>
 
-            Capturamos lugares<br>
-            desde otra perspectiva.
+<p id="heroTexto">
 
-        </h1>
+Fotografía y vídeo profesional con dron para inmobiliarias,
+turismo, empresas,inspecciones técnicas y proyectos únicos.
 
-        <p id="hero-text">
+</p>
 
-            Fotografía y vídeo profesional con drones para inmobiliarias,
-            turismo, empresas, inspecciones técnicas y proyectos únicos.
+<a id="heroBoton" href="#portfolio" class="btn">
 
-        </p>
+Ver proyectos
 
-        <a href="#portfolio" class="btn" id="hero-button">
+</a>
 
-            Ver proyectos
-
-        </a>
-
-    </div>
+</div>
 
 </section>
-
-
 <section id="about" class="about">
 
     <div class="container">
 
-        <h2 id="about-title">
+        <h2 id="aboutTitulo">Sobre Pixelair</h2>
 
-            Sobre Pixelair
-
-        </h2>
-
-        <p id="about-text">
-
+        <p id="aboutTexto">
             En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente.
-
-            Creamos contenido visual con drones para inmobiliarias, hoteles,
-            empresas, turismo, obras e inspecciones técnicas.
-
-            Cada fotografía está pensada para transmitir calidad,
+            Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo,
+            obras e inspecciones técnicas. Cada fotografía está pensada para transmitir calidad,
             amplitud y el verdadero valor de cada espacio.
-
         </p>
 
     </div>
 
 </section>
+
+
 <section id="portfolio" class="portfolio">
 
-    <h2 id="portfolio-title">
-        Nuestros proyectos
-    </h2>
+    <h2 id="portfolioTitulo">Nuestros proyectos</h2>
 
     <div class="grid">
 
         <div class="item">
-            <img src="images/hero.jpg" alt="Proyecto Hero">
+            <img src="images/hero.jpg" alt="Proyecto 1">
         </div>
 
         <div class="item">
-            <img src="images/villa1.jpg" alt="Villa 1">
+            <img src="images/villa1.jpg" alt="Proyecto 2">
         </div>
 
         <div class="item">
-            <img src="images/villa2.jpg" alt="Villa 2">
+            <img src="images/turismo1.jpg" alt="Proyecto 3">
         </div>
 
         <div class="item">
-            <img src="images/villa3.jpg" alt="Villa 3">
+            <img src="images/obra1.jpg" alt="Proyecto 4">
         </div>
 
         <div class="item">
-            <img src="images/obra1.jpg" alt="Obra">
+            <img src="images/villa2.jpg" alt="Proyecto 5">
         </div>
 
         <div class="item">
-            <img src="images/turismo1.jpg" alt="Turismo">
+            <img src="images/villa3.jpg" alt="Proyecto 6">
         </div>
 
     </div>
@@ -138,64 +128,30 @@
 
 <section id="contacto" class="contact">
 
-    <h2 id="contact-title">
-        Trabajemos juntos
-    </h2>
+    <h2 id="contactTitulo">Trabajemos juntos</h2>
 
-    <p id="contact-text">
+    <p id="contactTexto">
         ¿Necesitas fotografía o vídeo aéreo para tu próximo proyecto?
     </p>
 
-    <div class="contact-info">
+    <p>
+        📧 pixelairr@gmail.com
+        <br><br>
+        📞 +34 663 459 005
+    </p>
 
-        <p>
-            📧 <strong>Email:</strong><br>
-            <a href="mailto:pixelairr@gmail.com">
-                pixelairr@gmail.com
-            </a>
-        </p>
+    <br>
 
-        <p>
-            📞 <strong>Teléfono:</strong><br>
-            <a href="tel:+34663459005">
-                +34 663 459 005
-            </a>
-        </p>
-
-        <p>
-            📍 <strong>Ubicación:</strong><br>
-            Málaga, España
-        </p>
-
-    </div>
-
-    <a href="mailto:pixelairr@gmail.com" class="btn" id="contact-button">
+    <a id="contactBoton" href="mailto:pixelairr@gmail.com">
         Solicitar presupuesto
     </a>
 
 </section>
 
 
-<footer>
-
-    <p>© 2026 PIXELAIR</p>
-
-    <p>
-        📧
-        <a href="mailto:pixelairr@gmail.com">
-            pixelairr@gmail.com
-        </a>
-    </p>
-
-    <p>
-        📞
-        <a href="tel:+34663459005">
-            +34 663 459 005
-        </a>
-    </p>
-
+<footer id="footerTexto">
+    © 2026 PIXELAIR
 </footer>
-
 
 <script src="js/script.js"></script>
 
