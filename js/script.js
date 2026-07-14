@@ -88,3 +88,61 @@ function cambiarIdioma(idioma){
 
     document.getElementById("footerTexto").innerText = textos[idioma].footer;
 }
+/* ================= MODAL PROYECTOS ================= */
+
+const modal = document.getElementById("projectModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDate = document.getElementById("modalDate");
+const modalDescription = document.getElementById("modalDescription");
+
+const closeModal = document.querySelector(".close-modal");
+
+document.querySelectorAll(".item").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        modalImage.src = item.dataset.img;
+        modalTitle.textContent = item.dataset.title;
+        modalDate.textContent = item.dataset.date;
+        modalDescription.textContent = item.dataset.description;
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+closeModal.addEventListener("click", () => {
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "auto";
+
+});
+
+modal.addEventListener("click", (e) => {
+
+    if(e.target === modal){
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow = "auto";
+
+    }
+
+});
+
+document.addEventListener("keydown", (e) => {
+
+    if(e.key === "Escape"){
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow = "auto";
+
+    }
+
+});
