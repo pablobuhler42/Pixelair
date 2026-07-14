@@ -21,104 +21,135 @@
 
 <header>
 
-<div class="logo">
-PIXELAIR
-</div>
+    <div class="logo">
+        PIXELAIR
+    </div>
 
-<div class="languages">
+    <div class="languages">
 
-<span onclick="cambiarIdioma('es')">🇪🇸</span>
+        <span onclick="cambiarIdioma('es')">🇪🇸</span>
+        <span onclick="cambiarIdioma('en')">🇬🇧</span>
+        <span onclick="cambiarIdioma('de')">🇩🇪</span>
 
-<span onclick="cambiarIdioma('en')">🇬🇧</span>
+    </div>
 
-<span onclick="cambiarIdioma('de')">🇩🇪</span>
+    <nav>
 
-</div>
+        <a id="navInicio" href="#">Inicio</a>
+        <a id="navSobre" href="#about">Sobre nosotros</a>
+        <a id="navPortfolio" href="#portfolio">Portfolio</a>
+        <a id="navContacto" href="#contacto">Contacto</a>
 
-<nav>
-
-<a id="navInicio" href="#">Inicio</a>
-
-<a id="navSobre" href="#about">Sobre nosotros</a>
-
-<a id="navPortfolio" href="#portfolio">Portfolio</a>
-
-<a id="navContacto" href="#contacto">Contacto</a>
-
-</nav>
+    </nav>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h1 id="heroTitulo">
-Capturamos lugares desde otra perspectiva.
-</h1>
+        <h1 id="heroTitulo">
+            Capturamos lugares desde otra perspectiva.
+        </h1>
 
-<p id="heroTexto">
-
-Fotografía y vídeo profesional con dron para inmobiliarias,
-turismo, empresas,inspecciones técnicas y proyectos únicos.
-
-</p>
-
-<a id="heroBoton" href="#portfolio" class="btn">
-
-Ver proyectos
-
-</a>
-
-</div>
-
-</section>
-<section id="about" class="about">
-
-    <div class="container">
-
-        <h2 id="aboutTitulo">Sobre Pixelair</h2>
-
-        <p id="aboutTexto">
-            En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente.
-            Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo,
-            obras e inspecciones técnicas. Cada fotografía está pensada para transmitir calidad,
-            amplitud y el verdadero valor de cada espacio.
+        <p id="heroTexto">
+            Fotografía y vídeo profesional con dron para inmobiliarias,
+            turismo, empresas, inspecciones técnicas y proyectos únicos.
         </p>
+
+        <a id="heroBoton" href="#portfolio" class="btn">
+            Ver proyectos
+        </a>
 
     </div>
 
 </section>
 
+<section id="about" class="about">
 
+    <div class="container">
+
+        <h2 id="aboutTitulo">
+            Sobre Pixelair
+        </h2>
+
+        <p id="aboutTexto">
+
+            En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente.
+
+            Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo, obras e inspecciones técnicas.
+
+            Cada fotografía está pensada para transmitir calidad, amplitud y el verdadero valor de cada espacio.
+
+        </p>
+
+    </div>
+
+</section>
 <section id="portfolio" class="portfolio">
 
     <h2 id="portfolioTitulo">Nuestros proyectos</h2>
 
     <div class="grid">
 
-        <div class="item">
+        <div class="item"
+            data-img="images/hero.jpg"
+            data-title="Proyecto 1 · Fotografía aérea"
+            data-date="03/06/2026"
+            data-description="Sesión fotográfica aérea realizada para mostrar la amplitud del entorno y ofrecer una perspectiva diferente del paisaje. Las imágenes fueron editadas para conseguir una presentación limpia y de alta calidad.">
+
             <img src="images/hero.jpg" alt="Proyecto 1">
+
         </div>
 
-        <div class="item">
+        <div class="item"
+            data-img="images/villa1.jpg"
+            data-title="Proyecto 2 · Fotografía urbana"
+            data-date="28/03/2026"
+            data-description="Reportaje fotográfico aéreo realizado para resaltar la integración de las zonas verdes con el entorno urbano. La composición muestra la amplitud del paisaje, la arquitectura y el equilibrio entre naturaleza y ciudad desde una perspectiva diferente.">
+
             <img src="images/villa1.jpg" alt="Proyecto 2">
+
         </div>
 
-        <div class="item">
+        <div class="item"
+            data-img="images/turismo1.jpg"
+            data-title="Proyecto 3 · Fotografía turística"
+            data-date="15/02/2026"
+            data-description="Sesión de fotografía aérea orientada a destacar el valor paisajístico del entorno. La composición busca resaltar la belleza natural de la costa y ofrecer una imagen atractiva para promoción turística y comercial.">
+
             <img src="images/turismo1.jpg" alt="Proyecto 3">
+
         </div>
 
-        <div class="item">
+        <div class="item"
+            data-img="images/obra1.jpg"
+            data-title="Proyecto 4 · Inspección técnica"
+            data-date="12/07/2026"
+            data-description="Reportaje fotográfico aéreo realizado para una inspección técnica destinada a comprobar ángulos, alineaciones y el estado general de la obra. Las imágenes permiten documentar el proyecto con precisión y facilitar su seguimiento.">
+
             <img src="images/obra1.jpg" alt="Proyecto 4">
+
         </div>
 
-        <div class="item">
+        <div class="item"
+            data-img="images/villa2.jpg"
+            data-title="Proyecto 5 · Villa de lujo"
+            data-date="08/04/2026"
+            data-description="Fotografía aérea profesional destinada a destacar la arquitectura, los espacios exteriores y la amplitud de la propiedad. El resultado ofrece una imagen elegante pensada para promoción inmobiliaria.">
+
             <img src="images/villa2.jpg" alt="Proyecto 5">
+
         </div>
 
-        <div class="item">
+        <div class="item"
+            data-img="images/villa3.jpg"
+            data-title="Proyecto 6 · Vivienda unifamiliar"
+            data-date="17/01/2026"
+            data-description="Reportaje fotográfico realizado con dron para mostrar la propiedad desde diferentes alturas y perspectivas, resaltando la distribución del terreno y el entorno que la rodea.">
+
             <img src="images/villa3.jpg" alt="Proyecto 6">
+
         </div>
 
     </div>
@@ -126,21 +157,56 @@ Ver proyectos
 </section>
 
 
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="projectModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <img id="modalImage" src="" alt="Proyecto">
+
+        <div class="modal-info">
+
+            <h2 id="modalTitle"></h2>
+
+            <p class="modal-date">
+                <strong>Fecha:</strong>
+                <span id="modalDate"></span>
+            </p>
+
+            <p id="modalDescription"></p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= CONTACTO ================= -->
+
 <section id="contacto" class="contact">
 
-    <h2 id="contactTitulo">Trabajemos juntos</h2>
+    <h2 id="contactTitulo">
+        Trabajemos juntos
+    </h2>
 
     <p id="contactTexto">
         ¿Necesitas fotografía o vídeo aéreo para tu próximo proyecto?
     </p>
 
-    <p>
-        📧 pixelairr@gmail.com
-        <br><br>
-        📞 +34 663 459 005
-    </p>
+    <div class="contact-info">
 
-    <br>
+        <p>
+            📧 pixelairr@gmail.com
+        </p>
+
+        <p>
+            📞 +34 663 459 005
+        </p>
+
+    </div>
 
     <a id="contactBoton" href="mailto:pixelairr@gmail.com">
         Solicitar presupuesto
@@ -148,9 +214,14 @@ Ver proyectos
 
 </section>
 
+<!-- ================= FOOTER ================= -->
 
-<footer id="footerTexto">
-    © 2026 PIXELAIR
+<footer>
+
+    <p id="footerTexto">
+        © 2026 PIXELAIR · Todos los derechos reservados.
+    </p>
+
 </footer>
 
 <script src="js/script.js"></script>
