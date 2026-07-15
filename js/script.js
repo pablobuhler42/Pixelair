@@ -2,12 +2,12 @@
    PIXELAIR - SCRIPT.JS
 ========================================================== */
 
-/* ================= VARIABLES ================= */
-
 let idiomaActual = "es";
 let proyectoActual = null;
 
-/* ================= TRADUCCIONES ================= */
+/* ==========================================================
+   TEXTOS
+========================================================== */
 
 const textos = {
 
@@ -24,21 +24,15 @@ const textos = {
         boton: "Ver proyectos",
 
         sobreTitulo: "Sobre Pixelair",
-
-        sobreTexto:
-            "En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente. Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo, obras e inspecciones técnicas. Cada fotografía está pensada para transmitir calidad, amplitud y el verdadero valor de cada espacio.",
+        sobreTexto: "En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente. Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo, obras e inspecciones técnicas. Cada fotografía está pensada para transmitir calidad, amplitud y el verdadero valor de cada espacio.",
 
         proyectos: "Nuestros proyectos",
 
         contactoTitulo: "Trabajemos juntos",
-
-        contactoTexto:
-            "¿Necesitas fotografía o vídeo aéreo para tu próximo proyecto?",
-
+        contactoTexto: "¿Necesitas fotografía o vídeo aéreo para tu próximo proyecto?",
         presupuesto: "Solicitar presupuesto",
 
         fecha: "Fecha:",
-
         verProyecto: "Ver proyecto",
 
         footer: "© 2026 PIXELAIR · Todos los derechos reservados."
@@ -53,28 +47,20 @@ const textos = {
         contacto: "Contact",
 
         titulo: "We capture places from a different perspective.",
-
-        subtitulo:
-            "Professional drone photography and video for real estate, tourism, businesses, technical inspections and unique projects.",
+        subtitulo: "Professional drone photography and video for real estate, tourism, businesses, technical inspections and unique projects.",
 
         boton: "View projects",
 
         sobreTitulo: "About Pixelair",
-
-        sobreTexto:
-            "At Pixelair we believe every project deserves to be shown from a different perspective. We create aerial visual content for real estate, hotels, businesses, tourism and technical inspections. Every image is designed to showcase quality and the true value of every property.",
+        sobreTexto: "At Pixelair we believe every project deserves to be shown from a different perspective. We create aerial visual content for real estate, hotels, businesses, tourism and technical inspections. Every image is designed to showcase quality and the true value of every property.",
 
         proyectos: "Our Projects",
 
         contactoTitulo: "Let's work together",
-
-        contactoTexto:
-            "Need drone photography or video for your next project?",
-
+        contactoTexto: "Need drone photography or video for your next project?",
         presupuesto: "Request a quote",
 
         fecha: "Date:",
-
         verProyecto: "View project",
 
         footer: "© 2026 PIXELAIR · All rights reserved."
@@ -89,28 +75,20 @@ const textos = {
         contacto: "Kontakt",
 
         titulo: "Wir zeigen Orte aus einer neuen Perspektive.",
-
-        subtitulo:
-            "Professionelle Drohnenfotografie und Luftvideos für Immobilien, Tourismus, Unternehmen und technische Inspektionen.",
+        subtitulo: "Professionelle Drohnenfotografie und Luftvideos für Immobilien, Tourismus, Unternehmen und technische Inspektionen.",
 
         boton: "Projekte ansehen",
 
         sobreTitulo: "Über Pixelair",
-
-        sobreTexto:
-            "Bei Pixelair sind wir überzeugt, dass jedes Projekt aus einer einzigartigen Perspektive gezeigt werden sollte. Wir erstellen hochwertige Luftaufnahmen für Immobilien, Hotels, Unternehmen, Tourismus und technische Inspektionen.",
+        sobreTexto: "Bei Pixelair sind wir überzeugt, dass jedes Projekt aus einer einzigartigen Perspektive gezeigt werden sollte. Wir erstellen hochwertige Luftaufnahmen für Immobilien, Hotels, Unternehmen, Tourismus und technische Inspektionen.",
 
         proyectos: "Unsere Projekte",
 
         contactoTitulo: "Lassen Sie uns zusammenarbeiten",
-
-        contactoTexto:
-            "Benötigen Sie professionelle Luftaufnahmen für Ihr nächstes Projekt?",
-
+        contactoTexto: "Benötigen Sie professionelle Luftaufnahmen für Ihr nächstes Projekt?",
         presupuesto: "Angebot anfordern",
 
         fecha: "Datum:",
-
         verProyecto: "Projekt ansehen",
 
         footer: "© 2026 PIXELAIR · Alle Rechte vorbehalten."
@@ -257,7 +235,6 @@ const proyectos = {
     }
 
 };
-t
 /* ==========================================================
    FUNCIONES
 ========================================================== */
@@ -315,7 +292,7 @@ function cambiarIdioma(idioma) {
     document.getElementById("heroBoton").textContent =
         textos[idioma].boton;
 
-    /* Sobre nosotros */
+    /* Sobre */
 
     document.getElementById("aboutTitulo").textContent =
         textos[idioma].sobreTitulo;
@@ -328,7 +305,7 @@ function cambiarIdioma(idioma) {
     document.getElementById("portfolioTitulo").textContent =
         textos[idioma].proyectos;
 
-    /* Botones "Ver proyecto" */
+    /* Botones de proyectos */
 
     document.querySelectorAll("[data-project-button]").forEach(btn => {
 
@@ -352,12 +329,11 @@ function cambiarIdioma(idioma) {
     document.getElementById("footerTexto").textContent =
         textos[idioma].footer;
 
-    /* Si el modal está abierto, actualizarlo */
+    /* Actualizar modal si está abierto */
 
     actualizarProyecto();
 
 }
-v
 /* ==========================================================
    MODAL PROYECTOS
 ========================================================== */
@@ -406,7 +382,7 @@ function cerrarModal() {
 
 closeModal.addEventListener("click", cerrarModal);
 
-/* Cerrar pulsando fuera */
+/* ================= CERRAR PULSANDO FUERA ================= */
 
 modal.addEventListener("click", (e) => {
 
@@ -418,7 +394,7 @@ modal.addEventListener("click", (e) => {
 
 });
 
-/* Cerrar con Escape */
+/* ================= CERRAR CON ESC ================= */
 
 document.addEventListener("keydown", (e) => {
 
@@ -433,8 +409,6 @@ document.addEventListener("keydown", (e) => {
 /* ==========================================================
    INICIALIZACIÓN
 ========================================================== */
-
-/* Cargar idioma guardado */
 
 const idiomaGuardado = localStorage.getItem("idioma") || "es";
 
