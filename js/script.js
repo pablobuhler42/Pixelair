@@ -2,8 +2,12 @@
    PIXELAIR - SCRIPT.JS
 ========================================================== */
 
+/* ================= VARIABLES ================= */
+
 let idiomaActual = "es";
 let proyectoActual = null;
+
+/* ================= TRADUCCIONES ================= */
 
 const textos = {
 
@@ -16,20 +20,29 @@ const textos = {
 
         titulo: "Capturamos lugares desde otra perspectiva.",
         subtitulo: "Fotografía y vídeo profesional con dron para inmobiliarias, turismo, empresas, inspecciones técnicas y proyectos únicos.",
+
         boton: "Ver proyectos",
 
         sobreTitulo: "Sobre Pixelair",
-        sobreTexto: "En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente. Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo, obras e inspecciones técnicas. Cada fotografía está pensada para transmitir calidad, amplitud y el verdadero valor de cada espacio.",
+
+        sobreTexto:
+            "En Pixelair creemos que cada proyecto merece ser mostrado desde una perspectiva diferente. Creamos contenido visual con drones para inmobiliarias, hoteles, empresas, turismo, obras e inspecciones técnicas. Cada fotografía está pensada para transmitir calidad, amplitud y el verdadero valor de cada espacio.",
 
         proyectos: "Nuestros proyectos",
 
         contactoTitulo: "Trabajemos juntos",
-        contactoTexto: "¿Necesitas fotografía o vídeo aéreo para tu próximo proyecto?",
+
+        contactoTexto:
+            "¿Necesitas fotografía o vídeo aéreo para tu próximo proyecto?",
+
         presupuesto: "Solicitar presupuesto",
 
         fecha: "Fecha:",
 
+        verProyecto: "Ver proyecto",
+
         footer: "© 2026 PIXELAIR · Todos los derechos reservados."
+
     },
 
     en: {
@@ -40,21 +53,32 @@ const textos = {
         contacto: "Contact",
 
         titulo: "We capture places from a different perspective.",
-        subtitulo: "Professional drone photography and video for real estate, tourism, businesses, technical inspections and unique projects.",
-        boton: "View Projects",
+
+        subtitulo:
+            "Professional drone photography and video for real estate, tourism, businesses, technical inspections and unique projects.",
+
+        boton: "View projects",
 
         sobreTitulo: "About Pixelair",
-        sobreTexto: "At Pixelair we believe every project deserves to be shown from a different perspective. We create aerial visual content for real estate, hotels, businesses, tourism and technical inspections. Every image is designed to showcase quality and the true value of every property.",
+
+        sobreTexto:
+            "At Pixelair we believe every project deserves to be shown from a different perspective. We create aerial visual content for real estate, hotels, businesses, tourism and technical inspections. Every image is designed to showcase quality and the true value of every property.",
 
         proyectos: "Our Projects",
 
         contactoTitulo: "Let's work together",
-        contactoTexto: "Need professional drone photography or video for your next project?",
-        presupuesto: "Request a Quote",
+
+        contactoTexto:
+            "Need drone photography or video for your next project?",
+
+        presupuesto: "Request a quote",
 
         fecha: "Date:",
 
+        verProyecto: "View project",
+
         footer: "© 2026 PIXELAIR · All rights reserved."
+
     },
 
     de: {
@@ -65,21 +89,32 @@ const textos = {
         contacto: "Kontakt",
 
         titulo: "Wir zeigen Orte aus einer neuen Perspektive.",
-        subtitulo: "Professionelle Drohnenfotografie und Luftvideos für Immobilien, Tourismus, Unternehmen und technische Inspektionen.",
+
+        subtitulo:
+            "Professionelle Drohnenfotografie und Luftvideos für Immobilien, Tourismus, Unternehmen und technische Inspektionen.",
+
         boton: "Projekte ansehen",
 
         sobreTitulo: "Über Pixelair",
-        sobreTexto: "Bei Pixelair sind wir überzeugt, dass jedes Projekt aus einer einzigartigen Perspektive gezeigt werden sollte. Wir erstellen hochwertige Luftaufnahmen für Immobilien, Hotels, Unternehmen, Tourismus und technische Inspektionen.",
+
+        sobreTexto:
+            "Bei Pixelair sind wir überzeugt, dass jedes Projekt aus einer einzigartigen Perspektive gezeigt werden sollte. Wir erstellen hochwertige Luftaufnahmen für Immobilien, Hotels, Unternehmen, Tourismus und technische Inspektionen.",
 
         proyectos: "Unsere Projekte",
 
         contactoTitulo: "Lassen Sie uns zusammenarbeiten",
-        contactoTexto: "Benötigen Sie professionelle Luftaufnahmen für Ihr nächstes Projekt?",
+
+        contactoTexto:
+            "Benötigen Sie professionelle Luftaufnahmen für Ihr nächstes Projekt?",
+
         presupuesto: "Angebot anfordern",
 
         fecha: "Datum:",
 
+        verProyecto: "Projekt ansehen",
+
         footer: "© 2026 PIXELAIR · Alle Rechte vorbehalten."
+
     }
 
 };
@@ -89,7 +124,7 @@ const textos = {
 ========================================================== */
 
 const proyectos = {
-        1: {
+       1: {
 
         es: {
             titulo: "Proyecto 1 · Fotografía aérea",
@@ -222,8 +257,9 @@ const proyectos = {
     }
 
 };
+t
 /* ==========================================================
-   CAMBIAR IDIOMA
+   FUNCIONES
 ========================================================== */
 
 function actualizarProyecto() {
@@ -232,9 +268,14 @@ function actualizarProyecto() {
 
     const proyecto = proyectos[proyectoActual][idiomaActual];
 
-    document.getElementById("modalTitle").textContent = proyecto.titulo;
-    document.getElementById("modalDate").textContent = proyecto.fecha;
-    document.getElementById("modalDescription").textContent = proyecto.descripcion;
+    document.getElementById("modalTitle").textContent =
+        proyecto.titulo;
+
+    document.getElementById("modalDate").textContent =
+        proyecto.fecha;
+
+    document.getElementById("modalDescription").textContent =
+        proyecto.descripcion;
 
     document.getElementById("modalFechaLabel").textContent =
         textos[idiomaActual].fecha;
@@ -244,6 +285,12 @@ function actualizarProyecto() {
 function cambiarIdioma(idioma) {
 
     idiomaActual = idioma;
+
+    /* Guardar idioma */
+
+    localStorage.setItem("idioma", idioma);
+
+    /* Menú */
 
     document.getElementById("navInicio").textContent =
         textos[idioma].inicio;
@@ -257,6 +304,8 @@ function cambiarIdioma(idioma) {
     document.getElementById("navContacto").textContent =
         textos[idioma].contacto;
 
+    /* Hero */
+
     document.getElementById("heroTitulo").textContent =
         textos[idioma].titulo;
 
@@ -266,14 +315,28 @@ function cambiarIdioma(idioma) {
     document.getElementById("heroBoton").textContent =
         textos[idioma].boton;
 
+    /* Sobre nosotros */
+
     document.getElementById("aboutTitulo").textContent =
         textos[idioma].sobreTitulo;
 
     document.getElementById("aboutTexto").textContent =
         textos[idioma].sobreTexto;
 
+    /* Portfolio */
+
     document.getElementById("portfolioTitulo").textContent =
         textos[idioma].proyectos;
+
+    /* Botones "Ver proyecto" */
+
+    document.querySelectorAll("[data-project-button]").forEach(btn => {
+
+        btn.textContent = textos[idioma].verProyecto;
+
+    });
+
+    /* Contacto */
 
     document.getElementById("contactTitulo").textContent =
         textos[idioma].contactoTitulo;
@@ -284,12 +347,17 @@ function cambiarIdioma(idioma) {
     document.getElementById("contactBoton").textContent =
         textos[idioma].presupuesto;
 
+    /* Footer */
+
     document.getElementById("footerTexto").textContent =
         textos[idioma].footer;
+
+    /* Si el modal está abierto, actualizarlo */
 
     actualizarProyecto();
 
 }
+v
 /* ==========================================================
    MODAL PROYECTOS
 ========================================================== */
@@ -303,6 +371,8 @@ const modalDescription = document.getElementById("modalDescription");
 
 const closeModal = document.querySelector(".close-modal");
 
+/* ================= ABRIR MODAL ================= */
+
 document.querySelectorAll(".item").forEach(item => {
 
     item.addEventListener("click", () => {
@@ -310,6 +380,7 @@ document.querySelectorAll(".item").forEach(item => {
         proyectoActual = item.dataset.id;
 
         modalImage.src = item.dataset.img;
+        modalImage.alt = proyectos[proyectoActual][idiomaActual].titulo;
 
         actualizarProyecto();
 
@@ -320,6 +391,8 @@ document.querySelectorAll(".item").forEach(item => {
     });
 
 });
+
+/* ================= CERRAR MODAL ================= */
 
 function cerrarModal() {
 
@@ -333,6 +406,8 @@ function cerrarModal() {
 
 closeModal.addEventListener("click", cerrarModal);
 
+/* Cerrar pulsando fuera */
+
 modal.addEventListener("click", (e) => {
 
     if (e.target === modal) {
@@ -343,9 +418,11 @@ modal.addEventListener("click", (e) => {
 
 });
 
+/* Cerrar con Escape */
+
 document.addEventListener("keydown", (e) => {
 
-    if (e.key === "Escape") {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
 
         cerrarModal();
 
@@ -354,7 +431,11 @@ document.addEventListener("keydown", (e) => {
 });
 
 /* ==========================================================
-   IDIOMA POR DEFECTO
+   INICIALIZACIÓN
 ========================================================== */
 
-cambiarIdioma("es");
+/* Cargar idioma guardado */
+
+const idiomaGuardado = localStorage.getItem("idioma") || "es";
+
+cambiarIdioma(idiomaGuardado);
